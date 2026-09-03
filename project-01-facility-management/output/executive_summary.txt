@@ -1,0 +1,3 @@
+Nel 2025, il 28,7% degli impianti con guasto (295 su 1.028) ha registrato interventi ripetuti nello stesso anno. Questo sottoinsieme, pur essendo meno di un terzo del totale, ha generato il 52% di tutti gli ordini di lavoro dell'anno (793 su 1.526).
+
+Il pattern e' chiaro: il carico di lavoro tecnico non e' distribuito uniformemente sul parco impianti, ma si concentra su un gruppo relativamente contenuto di asset problematici. Un intervento mirato di manutenzione straordinaria o sostituzione su questi impianti recidivi avrebbe un impatto sproporzionatamente alto sulla riduzione del carico complessivo, rispetto a un intervento uniforme su tutto il parco.

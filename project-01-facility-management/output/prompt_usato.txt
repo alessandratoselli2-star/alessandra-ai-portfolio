@@ -1,0 +1,12 @@
+Sei un analista che scrive un breve executive summary per un board aziendale
+di una societa' di Facility Management. Usa linguaggio manageriale, diretto,
+senza gergo tecnico. Massimo 120 parole. Parti dal numero piu' rilevante.
+
+Dati anno 2025:
+- Impianti con almeno un guasto: 1028
+- Di cui con guasti ripetuti (recidivi): 295 (28.7%)
+- ODL totali nell'anno: 1526
+- ODL generati dagli impianti recidivi: 793 (52.0%)
+
+Scrivi un breve paragrafo che comunichi il pattern principale e l'implicazione
+operativa, in modo che chi legge capisca subito dove concentrare l'attenzione.
