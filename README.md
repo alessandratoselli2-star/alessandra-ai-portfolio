@@ -19,8 +19,14 @@ this repository collects that hands-on work.
 | Project | Description | Tech |
 |---|---|---|
 | [Project 01 — Automated Operations Performance Reporting](./project-01-facility-management) | End-to-end pipeline (synthetic data): data quality, fault-recidivism KPI engine, live-formula Excel reporting, AI executive summary, management slides, monthly automated orchestration | Python, pandas, Excel (live formulas), Canva, Claude |
+| [Project 02 — Operations Performance Chatbot MVP](./project-02-chatbot-mvp) | Claude Project configured as a Q&A assistant over Project 01's KPI report, with custom instructions that ground every answer in the underlying figures and decline out-of-scope questions rather than guessing | Claude Projects, prompt engineering |
+| [Project 03 — AI + Project Management (Product Launch Planning)](./project-03-lancio-prodotto) | WBS breakdown, three-point (PERT) duration estimates, Critical Path Method and float analysis for a generic product-launch scenario, translated into a live-formula Excel Gantt chart with the critical path highlighted | Excel (live formulas, CPM/PERT), openpyxl, Claude |
 
 **Key result (2025, synthetic dataset)**: 28.7% of assets with a fault had repeated interventions, generating 52% of all work orders for the year — concentrated, not diffuse, problem pattern.
+
+**Key result**: every answer stays grounded in Project 01's actual KPI figures, with the assistant explicitly declining questions outside that data rather than inventing numbers.
+
+**Key result (generic scenario, 15-task WBS)**: the critical path runs through product development and certification — not marketing or sales — with certification alone accounting for ~21 of the 64 working days to launch.
 
 ## Professional context (proprietary, not published here)
 
