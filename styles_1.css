@@ -1,0 +1,354 @@
+/* ============================================================
+   Alessandra Toselli — Portfolio
+   Stile "dark analytics": sfondo scuro, griglia sottile, accento
+   verde acqua. Foglio di stile unico, con una sezione dedicata
+   al mobile in fondo (media query).
+   ============================================================ */
+
+:root {
+  --bg: oklch(19% 0.02 250);
+  --bg-card: oklch(24% 0.02 250);
+  --bg-chip: oklch(28% 0.02 250);
+  --bg-stat: oklch(30% 0.02 250);
+  --border: oklch(35% 0.02 250);
+  --border-soft: oklch(30% 0.02 250);
+  --text: oklch(94% 0.005 250);
+  --text-soft: oklch(78% 0.01 250);
+  --text-mute: oklch(72% 0.01 250);
+  --text-faint: oklch(65% 0.01 250);
+  --text-copy: oklch(70% 0.01 250);
+  --accent: #7dd3c8;
+  --accent-hover: #a3e6dd;
+  --max-width: 1280px;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: 'Manrope', system-ui, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  background-image:
+    linear-gradient(oklch(28% 0.02 250 / 0.5) 1px, transparent 1px),
+    linear-gradient(90deg, oklch(28% 0.02 250 / 0.5) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+a { color: var(--accent); text-decoration: none; }
+a:hover { color: var(--accent-hover); }
+
+.mono { font-family: 'IBM Plex Mono', monospace; }
+
+.wrap {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding-left: 64px;
+  padding-right: 64px;
+}
+
+/* ---------- NAV ---------- */
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 28px 64px;
+  border-bottom: 1px solid var(--border);
+}
+.nav-brand {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 17px;
+  font-weight: 500;
+  color: white;
+}
+.nav-links {
+  display: flex;
+  gap: 32px;
+  font-size: 14px;
+  font-family: 'IBM Plex Mono', monospace;
+  color: var(--text-mute);
+}
+
+/* ---------- HERO ---------- */
+.hero {
+  display: flex;
+  flex-direction: column;
+  gap: 26px;
+  padding: 96px 64px 72px;
+  max-width: 780px;
+}
+.eyebrow {
+  font-size: 13px;
+  font-family: 'IBM Plex Mono', monospace;
+  letter-spacing: 0.04em;
+  color: var(--accent);
+}
+.hero h1 {
+  font-size: 50px;
+  line-height: 1.18;
+  font-weight: 700;
+  margin: 0;
+  color: white;
+  letter-spacing: -0.01em;
+}
+.hero p {
+  font-size: 17px;
+  line-height: 1.65;
+  color: var(--text-soft);
+  margin: 0;
+  max-width: 600px;
+}
+.hero-ctas {
+  display: flex;
+  gap: 16px;
+  margin-top: 8px;
+}
+.btn {
+  padding: 13px 26px;
+  border-radius: 4px;
+  font-size: 15px;
+  font-weight: 600;
+  display: inline-block;
+}
+.btn-primary {
+  background: var(--accent);
+  color: var(--bg);
+}
+.btn-primary:hover { background: var(--accent-hover); color: var(--bg); }
+.btn-outline {
+  border: 1px solid oklch(50% 0.01 250);
+  color: white;
+}
+.btn-outline:hover { border-color: var(--accent); color: var(--accent); }
+
+/* ---------- SECTION SHELL ---------- */
+.section {
+  padding: 40px 64px 72px;
+  border-top: 1px solid var(--border-soft);
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+.section-head {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.section-kicker {
+  font-size: 13px;
+  font-family: 'IBM Plex Mono', monospace;
+  color: var(--accent);
+}
+.section-head h2 {
+  font-size: 30px;
+  font-weight: 700;
+  margin: 0;
+  color: white;
+}
+.section-head p {
+  font-size: 15px;
+  color: var(--text-mute);
+  margin: 0;
+  max-width: 620px;
+}
+
+/* ---------- PROGETTI ---------- */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+}
+.project-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 26px 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.project-tag {
+  font-size: 12px;
+  font-family: 'IBM Plex Mono', monospace;
+  color: var(--accent);
+}
+.project-title {
+  font-size: 17px;
+  font-weight: 600;
+  color: white;
+}
+.project-desc {
+  font-size: 14px;
+  color: var(--text-mute);
+  line-height: 1.5;
+}
+.project-stat {
+  font-size: 13px;
+  font-family: 'IBM Plex Mono', monospace;
+  color: oklch(85% 0.01 250);
+  background: var(--bg-stat);
+  border-radius: 4px;
+  padding: 10px 12px;
+}
+.tag-row {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-top: 4px;
+}
+.tag-chip {
+  font-size: 12px;
+  font-family: 'IBM Plex Mono', monospace;
+  padding: 4px 10px;
+  background: var(--bg-stat);
+  border-radius: 3px;
+  color: var(--accent);
+}
+.project-link {
+  font-size: 13px;
+  font-weight: 600;
+  margin-top: 6px;
+}
+
+/* ---------- FORMAZIONE ---------- */
+.timeline { display: flex; flex-direction: column; gap: 0; }
+.timeline-row {
+  display: flex;
+  gap: 24px;
+  padding: 20px 0;
+  border-bottom: 1px solid var(--border-soft);
+}
+.timeline-row:last-child { border-bottom: none; }
+.timeline-when {
+  width: 180px;
+  flex-shrink: 0;
+  font-size: 13px;
+  font-family: 'IBM Plex Mono', monospace;
+  color: var(--text-faint);
+}
+.timeline-body {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.timeline-title {
+  font-size: 16px;
+  font-weight: 600;
+  color: white;
+}
+.timeline-desc {
+  font-size: 14px;
+  color: var(--text-copy);
+}
+
+.cert-groups {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  flex: 1;
+}
+.cert-group-label {
+  font-size: 12px;
+  font-family: 'IBM Plex Mono', monospace;
+  color: var(--accent);
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+.chip-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.chip {
+  font-size: 13px;
+  padding: 6px 14px;
+  background: var(--bg-chip);
+  border-radius: 16px;
+  color: oklch(85% 0.01 250);
+}
+
+/* ---------- COMPETENZE ---------- */
+.competenze-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+}
+.competenze-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.competenze-card.building { border-color: var(--accent); }
+.competenze-heading {
+  font-size: 14px;
+  font-weight: 700;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+.competenze-card.building .competenze-heading { color: var(--accent); }
+.competenze-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-size: 14px;
+  color: var(--text-soft);
+  line-height: 1.5;
+}
+.competenze-card.building .competenze-list { color: oklch(85% 0.01 250); }
+
+/* ---------- CONTATTI ---------- */
+.contact {
+  align-items: flex-start;
+  padding-top: 56px;
+}
+.contact h2 { font-size: 28px; }
+.contact p {
+  font-size: 15px;
+  color: var(--text-mute);
+  margin: 0;
+  max-width: 560px;
+}
+.contact-ctas {
+  display: flex;
+  gap: 16px;
+  margin-top: 8px;
+}
+
+/* ---------- FOOTER ---------- */
+footer {
+  padding: 24px 64px;
+  border-top: 1px solid var(--border-soft);
+  font-size: 12px;
+  font-family: 'IBM Plex Mono', monospace;
+  color: oklch(50% 0.01 250);
+}
+
+/* ============================================================
+   MOBILE — sotto i 860px il layout passa a una colonna
+   ============================================================ */
+@media (max-width: 860px) {
+  .nav { padding: 20px 24px; flex-wrap: wrap; gap: 12px; }
+  .nav-links { gap: 18px; font-size: 13px; flex-wrap: wrap; }
+
+  .hero { padding: 56px 24px 48px; max-width: 100%; }
+  .hero h1 { font-size: 34px; }
+  .hero p { font-size: 16px; }
+  .hero-ctas { flex-wrap: wrap; }
+
+  .section { padding: 32px 24px 48px; }
+  .section-head h2 { font-size: 24px; }
+
+  .projects-grid { grid-template-columns: 1fr; }
+  .competenze-grid { grid-template-columns: 1fr; }
+
+  .timeline-row { flex-direction: column; gap: 6px; }
+  .timeline-when { width: auto; }
+
+  footer { padding: 20px 24px; }
+  .contact { padding-top: 40px; }
+}
